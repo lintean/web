@@ -1,0 +1,348 @@
+body{
+    color: #6cbd74;
+    overflow: auto;
+}
+
+.voi_container {
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+}
+
+.leave {
+    width: 30.5px;
+    height: 21.5px;
+    vertical-align: middle;
+    display: inline-block;
+    background-image: url('../picture/icon/leave.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.voi_inputArea {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    color: #010101;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-size: 1em;
+}
+
+.line {
+    position: absolute;
+    height: 10%;
+    display: block;
+    width: 0px;
+    border-style: dashed;
+    border-color: RGB(207, 207, 207);
+    margin: 10px 15px;
+    z-index: -5;
+}
+
+#last_line {
+}
+
+#sec_back {
+    width: 80%;
+    height: 80%;
+}
+
+.record_start {
+    width: 108px;
+    height: 108px;
+    background-color: transparent;
+    background-image: url(../picture/icon/icon.PNG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: 3;
+}
+
+#record {
+    width: 50px;
+    height: 78px;
+}
+
+#stop_play {
+    width: 60px;
+    height: 45px;
+}
+
+.transition {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.div_scroll{
+    position: absolute;
+    top:0;
+    width: 100%;
+}
+
+.div_up {
+    transform: translate3D(0, -336px, 0);
+}
+
+.div_hidden {
+    transform: translate3D(0, 2000px, 0);
+}
+
+#operation {
+    height: 120px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#tip {
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+#div_end {
+    width: 80%;
+    height: 80%;
+}
+
+
+#postage{
+    position: relative;
+    display: block;
+    width:137px;
+    height:100px;
+    margin: 29px 0;
+}
+
+#time_last{
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+}
+
+.circle{
+    background-color: transparent;
+    position: absolute;
+}
+
+#step_front_record,#step_front_play{
+    stroke-dashoffset: 0;
+    stroke-dasharray: 735;
+}
+
+.active{
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+}
+
+svg{
+    position: absolute;
+    background-color: transparent;
+    width: 108px;
+    heigth:108px;
+    transform-origin:0 0 0;
+}
+
+#background{
+    width: 100%;
+    height: 100%;
+    background-image: url('../picture/background/group.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 100% 100%;
+}
+
+#startRecord{
+    position:relative;
+    display: block;
+    width:178px;
+    height:30.5px;
+    clear:both;
+    margin: 0 auto 15% auto;
+}
+
+.record_button{
+    display: block;
+    background-color: #6cbd74;
+    width: 98px;
+    height:36px;
+    margin:24px auto;
+    border:0;
+    padding:0;
+    color: #fdfdfd;
+    font-size: 14px;
+}
+
+#write{
+    position:relative;
+    display: block;
+    width:151.5px;
+    height:33.5px;
+    clear:both;
+    margin: auto;
+}
+
+.inputDiv{
+    width:80%;
+    margin:9% auto;
+}
+
+.selectDiv{
+    position: relative;
+    left:10%;
+}
+
+.grey{
+    color: RGB(207, 207, 207);
+}
+
+#to_record{
+    display: block;
+    width:118px;
+    height:40px;
+    color: white;
+    background-color: #6cbd74;
+    margin:0 auto;
+    padding:0;
+    border:0;
+}
+
+#end_tip{
+    position:relative;
+    text-align: left;
+    width: 198.5px;
+    height: 112px;
+    font-size: 16px;
+    margin:18px auto;
+}
+
+#code{
+    position:relative;
+    text-align: left;
+    width: 198.5px;
+    font-size: 16px;
+    margin:18px auto;
+}
+
+#end_button{
+    display: block;
+    background-color: #6cbd74;
+    width: 88px;
+    height:36px;
+    margin:38px auto;
+    border:0;
+    padding:0;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.focus{
+    color: rgb(150, 150, 150);
+}
+
+.error_show{
+    font-size: 12px;
+    position: absolute;
+    color: #eb6100;
+    margin: 0;
+}
+
+#noscroll_div{
+    position:relative;
+    width:100%;
+    height:336px;
+}
+
+#play{
+    width: 45px;
+    height: 45px;
+    padding-left: 8px;
+}
+
+@keyframes bounceIn_custom {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(0.85);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes bounceIn_custom {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    30% {
+        -webkit-transform: scale(0.85);
+    }
+    70% {
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+.to_stop{
+    -webkit-animation: bounceIn_custom 0.7s ease-in-out;
+    -moz-animation: bounceIn_custom 0.7s ease-in-out;
+    -o-animation: bounceIn_custom 0.7s ease-in-out;
+    animation: bounceIn_custom 0.7s ease-in-out;
+}
+
+.waveRaidus{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.wave{
+    -webkit-animation: waveRaidus 0.7s ease-out;
+    animation: waveRaidus 0.7s ease-out;
+}
+
+@-webkit-keyframes waveRaidus {
+    0% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+    30% {
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+    }
+    100% {
+        width: 130%;
+        height: 130%;
+        opacity: 0;
+    }
+}
+
+.record_div{
+    position:relative;
+    width:132px;
+    height:132px;
+    margin:12px auto
+}
+

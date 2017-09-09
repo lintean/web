@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @keyframes left_active {
+            100% {
+                transform: translate3d(50%, 0, 0) scale(2.5);
+            }
+        }
+
+        @keyframes right_inactive {
+            100% {
+                transform: translate3d(200%, 0, 0) scale(2.5);
+            }
+        }
+
+        @keyframes right_active {
+            100% {
+                transform: translate3d(-50%, 0, 0) scale(2.5);
+            }
+        }
+
+        @keyframes left_inactive {
+            100% {
+                transform: translate3d(-200%, 0, 0) scale(2.5);
+            }
+        }
+
+        html,body{
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            overflow:hidden;
+        }
+
+        .test {
+            position:relative;
+            display:inline-block;
+            height:40%;
+            width:40%;
+            background:#beceeb;
+            margin:0;
+            border:0;
+            padding:0;
+            left:10%;
+            top:30%;
+            text-align:center;
+
+            /*-webkit-transition:test_active 2s ease-in-out;*/
+            /*-moz-transition:test_active 2s ease-in-out;*/
+            /*-o-transition:test_active 2s ease-in-out;*/
+            /*-ms-transition:test_active 2s ease-in-out;*/
+            /*transition:test_active 2s ease-in-out;*/
+
+        }
+        .left_active{
+            -webkit-animation:left_active 2s 1 ease-in-out forwards;
+            -moz-animation:left_active 2s 1 ease-in-out forwards;
+            -o-animation:left_active 2s 1 ease-in-out forwards;
+            -ms-animation:left_active 2s 1 ease-in-out forwards;
+            animation:left_active 2s 1 ease-in-out forwards;
+        }
+        
+        .right_inactive{
+            -webkit-animation:right_inactive 2s 1 ease-in-out forwards;
+            -moz-animation:right_inactive 2s 1 ease-in-out forwards;
+            -o-animation:right_inactive 2s 1 ease-in-out forwards;
+            -ms-animation:right_inactive 2s 1 ease-in-out forwards;
+            animation:right_inactive 2s 1 ease-in-out forwards;
+        }
+        
+        .right_active{
+            -webkit-animation:right_active 2s 1 ease-in-out forwards;
+            -moz-animation:right_active 2s 1 ease-in-out forwards;
+            -o-animation:right_active 2s 1 ease-in-out forwards;
+            -ms-animation:right_active 2s 1 ease-in-out forwards;
+            animation:right_active 2s 1 ease-in-out forwards;
+        }
+        
+        .left_inactive{
+            -webkit-animation:left_inactive 2s 1 ease-in-out forwards;
+            -moz-animation:left_inactive 2s 1 ease-in-out forwards;
+            -o-animation:left_inactive 2s 1 ease-in-out forwards;
+            -ms-animation:left_inactive 2s 1 ease-in-out forwards;
+            animation:left_inactive 2s 1 ease-in-out forwards;
+        }
+        
+
+    </style>
+
+    <script src="js/jquery-min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#1').bind('click', function (event) {
+                $(this).addClass('left_active');
+                $('#2').addClass('right_inactive');
+            });
+
+            $('#2').bind('click', function (event) {
+                $(this).addClass('right_active');
+                $('#1').addClass('left_inactive');
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <input type="button" id="1" class="test" value="按我" >
+    <input type="button" id="2" class="test" value="按我" >
+
+</body>
+</html>

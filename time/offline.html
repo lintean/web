@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <title>时光胶囊2017线下信</title>
+    <link rel="stylesheet" href="css/normal.css" type="text/css">
+    <link href="css/offline.css" type="text/css" rel="stylesheet">
+
+    <script src="js/jquery-min.js"></script>
+    <script src="js/normal.js"></script>
+    <script src="js/offline.js"></script>
+</head>
+
+<body>
+    <section class="off_container" id="sec_first">
+        <div id="back_first"></div>
+        <p class="p">欢迎你参加时光胶囊活动＞ˍ＜</p>
+        <p class="p">现在，你需要填写你的个人信息以及寄出信件的数量和大致地址，而后凭借获得的编号前往百步梯摊位换取信封哦</p>
+        <p class="p">需要说明的是在领取信封时你需要支付一定的邮资，具体如下：</p>
+        <div class="first_div"><span class="first_span_front">南北校(不经邮局)</span><span class="first_span_end">0.5元/封</span></div>
+        <div class="first_div"><span class="first_span_front">广州市内</span><span class="first_span_end">0.8元/封</span></div>
+        <div class="first_div"><span class="first_span_front">广州市外</span><span class="first_span_end">1.2元/封</span></div>
+        <input type="submit" id="first_button" class="radius" value="下一步">
+    </section>
+
+
+    <section class="hidden off_container" id="sec_front">
+        <img src="picture/font/write.png" id="write">
+
+            <div class="inputDiv" id="first_div">
+                <div class="leave" id="leave_name">
+                    <hr class="line">
+                </div>
+                <span id="tip_name">姓名</span>
+                <input type="text" class="inputArea" placeholder="点此输入" id="senderName">
+                <p class="display_hidden error_show" id="error_name">请输入姓名</p>
+            </div>
+            <div class="inputDiv">
+                <div class="leave" id="leave_phone">
+                    <hr class="line">
+                </div>
+                <span id="tip_phone">手机号</span>
+                <input type="text" class="inputArea" placeholder="点此输入" id="senderPhone">
+                <p class="display_hidden error_show" id="error_phone">请输入姓名</p>
+            </div>
+            <div class="inputDiv">
+                <div class="leave" id="leave_qq">
+                    <hr class="line">
+                </div>
+                <span id="tip_qq">QQ</span>
+                <input type="text" class="inputArea" placeholder="点此输入" id="qq">
+                <p class="display_hidden error_show" id="error_qq">请输入姓名</p>
+            </div>
+            <div class="inputDiv">
+                <div class="leave" id="leave_class">
+                    <hr class="line">
+                </div>
+                <span id="tip_class">年级学院</span>
+                <input type="text" class="inputArea" placeholder="例如:16设计学院" id="senderClass">
+                <p class="display_hidden error_show" id="error_class">请输入姓名</p>
+            </div>
+
+            <div class="inputDiv" id="hidden_div">
+                <div class="leave"  id="leave_time">
+                    <hr class="line" id="last_line">
+                </div>
+                <span id="tip_time">寄出时间</span>
+                <div class="selectDiv">
+                    <input type="checkbox" name="yearchoose" id="halfyear">
+                    <label for="halfyear" id="h_lable">半年</label>
+                </div>
+                <div class="" id="h_hidden">
+                    <div class="time_container">
+                        <span>广州市内</span>
+                        <select id="h_i_g">
+                            <option value="0" selected="selected">0封</option>
+                            <option value="1">1封</option>
+                            <option value="2">2封</option>
+                            <option value="3">3封</option>
+                            <option value="4">4封</option>
+                            <option value="5">5封</option>
+                        </select>
+                    </div>
+                    <div class="time_container">
+                        <span>广州市外</span>
+                        <select id="h_o_g">
+                            <option value="0" selected="selected">0封</option>
+                            <option value="1">1封</option>
+                            <option value="2">2封</option>
+                            <option value="3">3封</option>
+                            <option value="4">4封</option>
+                            <option value="5">5封</option>
+                        </select>
+                    </div>
+                    <div class="time_container">
+                        <span>南北校区</span>
+                        <select id="h_i_c">
+                            <option value="0" selected="selected">0封</option>
+                            <option value="1">1封</option>
+                            <option value="2">2封</option>
+                            <option value="3">3封</option>
+                            <option value="4">4封</option>
+                            <option value="5">5封</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="selectDiv">
+                    <input type="checkbox" name="yearchoose" id="year">
+                    <label for="year"  id="y_lable">一年</label>
+                </div>
+                <div class="" id="y_hidden">
+                    <div class="time_container">
+                        <span>广州市内</span>
+                        <select id="y_i_g">
+                            <option value="0" selected="selected">0封</option>
+                            <option value="1">1封</option>
+                            <option value="2">2封</option>
+                            <option value="3">3封</option>
+                            <option value="4">4封</option>
+                            <option value="5">5封</option>
+                        </select>
+                    </div>
+                    <div class="time_container">
+                        <span>广州市外</span>
+                        <select id="y_o_g">
+                            <option value="0" selected="selected">0封</option>
+                            <option value="1">1封</option>
+                            <option value="2">2封</option>
+                            <option value="3">3封</option>
+                            <option value="4">4封</option>
+                            <option value="5">5封</option>
+                        </select>
+                    </div>
+                    <div class="time_container">
+                        <span>南北校区</span>
+                        <select id="y_i_c">
+                            <option value="0" selected="selected">0封</option>
+                            <option value="1">1封</option>
+                            <option value="2">2封</option>
+                            <option value="3">3封</option>
+                            <option value="4">4封</option>
+                            <option value="5">5封</option>
+                        </select>
+                    </div>
+                </div>
+                <p class="display_hidden error_show" id="error_time">请输入姓名</p>
+            </div>
+            
+            <div class="inputDiv">
+                <div class="leave"></div>
+                <span>填完啦，提交吧</span>
+            </div>
+        <input type="submit" id="submit_d" class="" value="提交">
+    </section>
+
+
+    <section class="hidden off_container" id="sec_end">
+        <div id="back_end"></div>
+        <p class="p">提交成功＞ˍ＜</p>
+        <div class="first_div"><span class="first_span_front">你的信件编号为：</span><span class="first_span_end color" id="code"></span></div>
+        <p class="no_margin">你将要寄出的信件有：</p>
+        <div class="second_div">
+            <div class="three_div"><span class="first_span_front">半年期</span><span class="first_span_end">（不经邮局）南北校：<span id="_h_i_c"></span>封</span></div>
+            <p class="three_div">广州市内：<span id="_h_i_g"></span>封</p>
+            <p class="three_div">广州市外：<span id="_h_o_g"></span>封</p>
+        </div>
+        <div class="second_div">
+            <div class="three_div"><span class="first_span_front">一年期</span><span class="first_span_end">（不经邮局）南北校：<span id="_y_i_c"></span>封</span></div>
+            <p class="three_div">广州市内：<span id="_y_i_g"></span>封</p>
+            <p class="three_div">广州市外：<span id="_y_o_g"></span>封</p>
+        </div>
+        <p class="pp">邮资总计：<span id="money"></span>元</p>
+        <p class="pp color">
+            请截屏<br>
+            请截屏<br>
+            请截屏<br>
+        </p>
+        <p class="no_margin">重要的事情说三遍＞ˍ＜</p>
+        <p class="no_margin">将当前页面出示给摊位工作人员即可领取信封＞ˍ＜</p>
+    </section>
+</body>
+</html>

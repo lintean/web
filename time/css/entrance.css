@@ -1,0 +1,61 @@
+.en_container{
+    width: 60%;
+    height: 50%;
+}
+
+
+.choose{
+    width: 80%;
+    height: 55px;
+}
+
+.image_container{
+    position: absolute;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    top: 0;
+    right: 50%;
+    margin-right: 24px;
+    background-image: url(../picture/icon/icon.PNG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.word{
+    position: absolute;
+    height: 100%;
+    display: inline-block;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    line-height: 55px;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.inl{
+    display: block;
+    position: relative;
+    margin: 36px auto;
+}
+
+#choose{
+    font-size: 24px;
+    color:#6cbd74;
+}
+
+#record{
+    width:29px;
+    height:46px;
+}
+
+#edit{
+    width:20px;
+    height:20px;
+    left:6%;
+}

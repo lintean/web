@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <title>时光胶囊2017</title>
+    <link type="text/css" rel="stylesheet" href="css/animate.css">
+    <link type="text/css" rel="stylesheet" href="css/time.css">
+    <link type="text/css" rel="stylesheet" href="css/normal.css">
+    <script src="js/jquery-min.js"></script>
+    <script src="js/normal.js"></script>
+    <script src="js/time.js"></script>
+
+    <style>
+        body{
+            background-image:url('./picture/background/dark.png');
+            background-repeat:no-repeat;
+            background-position:center;
+            background-size: 100% 100%;
+        }
+
+        .word_inputArea{
+            position: absolute;
+            display: inline-block;
+            width: 60%;
+            left: 41.5px;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-size: 16px;
+            background-color: transparent;
+        }
+
+        .word_inline{
+            position: relative;
+            display: block;
+            color: RGB(3, 4, 4);
+            width: 70%;
+            height: 20px;
+            left: 15%;
+            margin: 18px 0 0 0;
+            border-bottom: 1px dashed RGB(150, 150, 150);
+            padding: 0;
+        }
+
+        #choose_time{
+            left: 41.5px;
+            position: relative;
+            color: RGB(207, 207, 207);
+        }
+
+        .lable{
+            position: relative;
+            left: 41.5px;
+            color: RGB(207, 207, 207);
+        }
+
+        #name_from{
+            left:74.5px;
+        }
+
+        #input_div{
+            position:absolute;
+            height:234px;
+            width:100%;
+            bottom:20%;
+            margin:0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="Absolute_Center left_active" id="letter_div">
+        <img src="picture/container.png" id="front" class="hidden">
+        <img src="picture/letter.png" id="back" class="">
+    </div>
+    <div class="hidden" id="content">
+        <div class="content_div" id="div_left">
+            <textarea class="radius Absolute_Center" id="input_text" placeholder="点此输入内容"></textarea>
+            <p id="to_right" class="bottom_word font">填写联系信息</p>
+        </div>
+
+        <div class="content_div" id="div_right">
+            <div id="pic_show">
+                <img id="pic" src="picture/stamp.png">
+            </div>
+            <div id="input_div">
+                <div class="word_inline">
+                    <img src="picture/font/to.png" class="word_icon" id="to">
+                    <input class="word_inputArea radius" id="name_to" type="text" placeholder="输入收件人姓名">
+                </div>
+                <div class="word_inline">
+                    <input class="word_inputArea radius" id="phone_to" type="number" placeholder="输入收信人手机">
+                    <hr class="dotted_line">
+                </div>
+                <div class="word_inline">
+                    <input class="word_inputArea radius" id="qq_to" type="number" placeholder="输入收信人QQ">
+                    <hr class="dotted_line">
+                </div>
+                <div class="word_inline">
+                    <img src="picture/font/from.png" class="word_icon" id="form">
+                    <input class="word_inputArea radius" id="name_from" type="text" placeholder="选填寄件人姓名">
+                    <hr class="dotted_line">
+                </div>
+                <div class="word_inline">
+                    <input class="word_inputArea radius" id="phone_from" type="number" placeholder="选填寄件人手机">
+                    <hr class="dotted_line">
+                </div>
+                <div class="word_inline">
+                    <span id="choose_time" class="">选择寄出时间</span>
+                    <input class="inline_element radius radio" id="halfyear" type="radio" name="year_choose">
+                    <label for="halfyear" class="lable">半年</label>
+                    <input class="inline_element radius radio" id="oneyear" type="radio"  name="year_choose">
+                    <label for="oneyear" class="lable">一年</label>
+                </div>
+            </div>
+
+            <div class="bottom_word" id="button_bar">
+                <span class="radius font" id="to_left">修改信件</span>
+                <div id="submit_data">
+                    <img src="picture/icon/submit.svg" id="submit_icon">
+                    <span class="font" id="submit_button">提交</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dark hidden" id="cover"></div>
+    <section class="Absolute_Center hidden" id="sec_flow">
+        <img src="picture/postage.png" id="postage">
+        <div id="end_tip">
+            投递成功！<br>
+            感谢你的参与＞ˍ＜<br>
+            梯仔会在 <b id="halfyear_show" class="display_hidden">半年</b><b id="year_show" class="display_hidden">一年</b> 后<br>
+            以 <b>短信</b> 形式通知 <b>收信人</b><br>
+            <b>获取码</b> 和 <b>获取方式</b>
+        </div>
+        <p id="code">你的获取码为：<span id="code_show"></span></p>
+        <input type="submit" id="end_button" class="end_button radius" value="确定">
+    </section>
+</body>
+</html>

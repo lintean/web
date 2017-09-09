@@ -1,0 +1,232 @@
+body{
+    background: none;
+}
+
+.time_input{
+    position:relative;
+    display: inline-block;
+    width:1.5em;
+}
+
+.time_container{
+    position:relative;
+    display: block;
+    width:40%;
+    margin:2px 0;
+}
+
+select{
+    display: inline-block;
+    border-style: dashed;
+    color: rgb(150, 150, 150);
+}
+
+.leave {
+    width: 30.5px;
+    height: 21.5px;
+    vertical-align: middle;
+    display: inline-block;
+    background-image: url('../picture/icon/leave.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.line {
+    position: absolute;
+    height: 10%;
+    display: block;
+    width: 0px;
+    border-style: dashed;
+    border-color: RGB(207, 207, 207);
+    margin: 0 15px;
+    top: 10px;
+    z-index: -1;
+}
+
+.inputDiv{
+    width: 70%;
+    margin: 10% auto;
+    position: relative;
+}
+
+.inputArea {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    color: #010101;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    outline: none;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+
+.off_container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: #6cbd74;
+    font-size: 14px;
+}
+
+
+#write{
+    position:relative;
+    display: block;
+    width:151.5px;
+    height:33.5px;
+    clear:both;
+    margin:10% auto 0 auto;
+}
+
+#submit_d,#first_button{
+    position: relative;
+    display: block;
+    width:118px;
+    height:40px;
+    color: white;
+    background-color: #6cbd74;
+    margin:10% auto;
+    padding:0;
+    border:0;
+    font-size: 16px;
+    border-radius: 4px;
+    left:0;
+    right:0;
+}
+
+.selectDiv{
+    position: relative;
+    left:10%;
+}
+
+
+#h_hidden,#y_hidden{
+    position:relative;
+    width:100%;
+    color: rgb(150, 150, 150);
+}
+
+.focus{
+    color: rgb(150, 150, 150);
+}
+
+#sec_end{
+    background-image:url('../picture/background/light.png');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: 0 0;
+    background-clip: content-box;
+    font-size: 16px;
+    color: gray;
+    overflow: hidden;
+}
+
+#sec_front{
+    background-image:url('../picture/background/light.png');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: 0 0;
+    background-clip: content-box;
+    height:auto;
+    overflow: hidden;
+}
+
+#sec_first{
+    background-image:url('../picture/background/light.png');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: 0 0;
+    background-clip: content-box;
+    font-size: 16px;
+    color: gray;
+    overflow: hidden;
+}
+
+#back_first,#back_end{
+    background-image:url('../picture/background/ti.png');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: 100% 100%;
+    background-clip: content-box;
+    background-size: 60% auto;
+
+    position:absolute;
+    width:100%;
+    height:100%;
+    margin:0;
+}
+
+.p{
+    position:relative;
+    width:70%;
+    margin:10% auto 0 auto;
+}
+
+.pp{
+    position:relative;
+    width:70%;
+    margin:7% auto 0 auto;
+}
+
+.first_div{
+    position:relative;
+    width:70%;
+    height: 25px;
+    margin:0 auto;
+}
+
+.first_span_front{
+    position:absolute;
+    left:0;
+}
+
+.first_span_end{
+    position:absolute;
+    right:0;
+}
+
+.second_div{
+    position:relative;
+    width:70%;
+    margin:0 auto 7% auto;
+}
+
+.three_div{
+    position:relative;
+    width:100%;
+    height:25px;
+    margin:0;
+    text-align: right;
+}
+
+.no_margin{
+    position:relative;
+    width:70%;
+    margin:0 auto;
+}
+
+.active{
+    -webkit-transition:height 0.7s  ease-out;
+    -moz-transition:height 0.7s ease-out;
+    -o-transition:height 0.7s  ease-out;
+    transition:height 0.7s ease-out;
+}
+
+.error_show{
+    font-size: 12px;
+    position: absolute;
+    color: #eb6100;
+    margin: 0;
+}
+
+
+.red_color{
+    color: #eb6100;
+}
+

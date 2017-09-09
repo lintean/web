@@ -1,0 +1,377 @@
+/*@keyframes left_active {*/
+    /*80% {*/
+        /*transform: translate3d(50%, 0, 0) scale(2.5);*/
+    /*}*/
+    /*100%{*/
+        /*transform: translate3d(50%, 0, 0) scale(2.5);*/
+    /*}*/
+/*}*/
+
+/*@keyframes right_inactive {*/
+    /*80% {*/
+        /*transform: translate3d(200%, 0, 0) scale(2.5);*/
+    /*}*/
+    /*100%{*/
+        /*transform: translate3d(200%, 0, 0) scale(2.5);*/
+    /*}*/
+/*}*/
+
+/*@keyframes left_inactive_reverse {*/
+    /*0% {*/
+        /*transform: translate3d(-200%, 0, 0) scale(2.5);*/
+    /*}*/
+    /*100%{*/
+        /*transform: translate3d(0, 0, 0);*/
+    /*}*/
+/*}*/
+
+/*@keyframes right_active_reverse {*/
+    /*0% {*/
+        /*transform: translate3d(-50%, 0, 0) scale(2.5);*/
+    /*}*/
+    /*100%{*/
+        /*transform: translate3d(0, 0, 0);*/
+    /*}*/
+/*}*/
+
+/*@keyframes left_active {*/
+    /*80% {*/
+        /*transform: translate3d(50%, 0, 0) scale(10);*/
+    /*}*/
+    /*100%{*/
+        /*transform: translate3d(50%, 0, 0) scale(10);*/
+    /*}*/
+/*}*/
+
+@keyframes fx-overlay {
+    0% {
+        visibility: visible;
+        color: transparent;
+    }
+
+    50% {
+        background-color: #8c8c8c;
+        color: white;
+    }
+
+    100% {
+        visibility: visible;
+        background-color: #8c8c8c;
+        color: #FFF;
+    }
+}
+
+@keyframes flow_active {
+    0% {
+        visibility: visible;
+        color: transparent;
+    }
+
+    50% {
+        background-color: transparent;
+        color: white;
+    }
+
+    100% {
+        visibility: visible;
+        background-color: transparent;
+        color: #FFF;
+    }
+}
+
+
+#letter_div {
+    width:237px;
+    height:160px;
+    max-height: 100%;
+    max-width: 200%;
+    overflow: hidden;
+}
+
+.letter{
+    background-image:url('../picture/letter.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+
+#front,#back{
+    position: absolute;
+    width: 100%;
+    height:100%;
+}
+
+
+/*.inline{*/
+    /*position: relative;*/
+    /*display: block;*/
+    /*color: RGB(3, 4, 4);*/
+    /*width: 70%;*/
+    /*height: 20px;*/
+    /*left: 15%;*/
+    /*margin: 18px 0;*/
+    /*border-bottom: 1px dashed RGB(3, 4, 4);*/
+    /*padding: 0;*/
+/*}*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 9999;
+    visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+#to_right{
+    right:15%;
+    margin: auto;
+    border: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.left_active{
+    -webkit-transition:all 2s 0.4s  ease-in-out;
+    -moz-transition:all 2s 0.4s ease-in-out;
+    -o-transition:all 2s 0.4s  ease-in-out;
+    transition:all 2s 0.4s ease-in-out;
+}
+
+.without{
+    -webkit-transition:all 2s ease-in-out;
+    -moz-transition:all 2s ease-in-out;
+    -o-transition:all 2s ease-in-out;
+    transition:all 2s ease-in-out;
+}
+
+.overlay.flow_active{
+    animation: flow_active 0.8s 2s 1 ease-in-out forwards;
+    -webkit-animation: flow_active 0.8s 2s 1 ease-in-out forwards;
+    -moz-animation: flow_active 0.8s 2s 1 ease-in-out forwards;
+}
+
+.overlay.visible{
+    visibility: visible;
+    background-color: transparent;
+}
+
+.inline_element{
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    top: 0;
+    left: 41.5px;
+    right: 0;
+    bottom: 0;
+}
+
+#message_content{
+    position:relative;
+    display: block;
+    color: black;
+    background-color: #FFFFFF;
+    width:80%;
+    height:60%;
+    top:10%;
+    left:10%;
+    margin:0;
+    border:0;
+    padding:0;
+}
+
+
+#message_button{
+    position:relative;
+    height:5%;
+    left:65%;
+}
+
+#to_left{
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.font{
+    font-size: 18px;
+    line-height: 18px;
+}
+
+#submit_data{
+    position: absolute;
+    display: inline-block;
+    right: 10%;
+    height: 100%;
+}
+
+#div_left{
+    left:0;
+}
+
+#div_right{
+    right:0;
+}
+
+.content_div{
+    position:absolute;
+    display: inline-block;
+    height: 100%;
+    width:50%;
+    top:0;
+}
+
+#input_text{
+    width:70%;
+    height:60%;
+    font-size: 16px
+}
+
+.bottom_word{
+    position: absolute;
+    bottom:7.74%;
+}
+
+.dotted_line{
+    position: relative;
+    display: inline-block;
+    border:1px #8f000000 dotted
+}
+
+.word_icon{
+    position: relative;
+    display: inline-block;
+    left: 0;
+    top: 1px;
+    height: 20px;
+    background-color: white;
+}
+
+#to{
+    width:29.5px;
+}
+
+#from{
+    width:62.5px;
+}
+
+
+#the_last_line{
+    position:absolute;
+}
+
+
+#pic_show{
+    position: relative;
+    width: 70%;
+    left: 15%;
+    padding: 0;
+    height:98px;
+    margin-top:24px;
+    margin-bottom: 54px;
+}
+
+#pic{
+    position:absolute;
+    right:0;
+    top:0;
+    height:98px;
+    width:82px;
+}
+
+#content{
+    position:absolute;
+    width:237px;
+    height:160px;
+    max-height: 100%;
+    max-width: 200%;
+    background-color: transparent;
+    font-size:16px;
+}
+
+#submit_icon{
+    position: relative;
+    height: 18px;
+    width: 18px;
+    top: 2.5px;
+}
+
+#button_bar{
+    height: 18px;
+    width: 70%;
+    right: 15%;
+}
+
+#sec_flow{
+    width:70%;
+    height:85%;
+    z-index: 9999;
+    border-radius: 16px;
+
+    background-color: white;
+
+    -webkit-transition:all 1s 2.4s  ease-in-out;
+    -moz-transition:all 1s 2.4s ease-in-out;
+    -o-transition:all 1s 2.4s  ease-in-out;
+    transition:all 1s 2.4s ease-in-out;
+}
+
+.dark{
+    background-color: gray;
+    filter: opacity(30%);
+    -webkit-filter: opacity(30%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9998;
+}
+
+#postage{
+    position: relative;
+    display: block;
+    width:137px;
+    height:100px;
+    margin: 29px 0;
+}
+
+#end_tip{
+    position:relative;
+    text-align: left;
+    width: 198.5px;
+    height: 112px;
+    font-size: 16px;
+    margin:18px auto;
+}
+
+#end_button{
+    display: block;
+    background-color: #6cbd74;
+    width: 88px;
+    height:36px;
+    margin:38px auto;
+    border:0;
+    padding:0;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#code{
+    position: relative;
+    text-align: left;
+    width: 198.5px;
+    font-size: 16px;
+    margin: 18px auto;
+}
+
+
+
+

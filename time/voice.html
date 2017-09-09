@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <title>时光胶囊2017语音慢递</title>
+    <link href="css/normal.css" rel="stylesheet" type="text/css">
+    <link href="css/voice.css" rel="stylesheet" type="text/css">
+
+    <script src="js/jquery-min.js"></script>
+    <script src="js/jweixin-1.0.0.js"></script>
+    <script src="js/normal.js"></script>
+    <script src="js/voice.js"></script>
+</head>
+
+<body>
+<section class="voi_container Absolute_Center" id="sec_front">
+    <img src="picture/font/write.png" id="write">
+    <div id="container_div">
+        <div class="inputDiv">
+            <div class="leave" id="leave_name_to">
+                <hr class="line">
+            </div>
+            <span id="tip_name_to">收件人姓名</span>
+            <input type="text" class="voi_inputArea" placeholder="点此输入" id="name_to">
+            <p class="display_hidden error_show" id="error_name_to">请输入姓名</p>
+        </div>
+        <div class="inputDiv">
+            <div class="leave" id="leave_phone_to">
+                <hr class="line">
+            </div>
+            <span id="tip_phone_to">收件人手机</span>
+            <input type="number" class="voi_inputArea" placeholder="点此输入" id="phone_to">
+            <p class="display_hidden error_show" id="error_phone_to">请输入姓名</p>
+        </div>
+        <div class="inputDiv">
+            <div class="leave" id="leave_qq_to">
+                <hr class="line">
+            </div>
+            <span id="tip_qq_to">收件人QQ</span>
+            <input type="number" class="voi_inputArea" placeholder="点此输入" id="qq_to">
+            <p class="display_hidden error_show" id="error_qq_to">请输入姓名</p>
+        </div>
+        <div class="inputDiv">
+            <div class="leave" id="leave_name_from">
+                <hr class="line">
+            </div>
+            <span id="tip_name_from">寄件人姓名</span>
+            <input type="text" class="voi_inputArea" placeholder="此项选填" id="name_from">
+            <p class="display_hidden error_show" id="error_name_from">请输入姓名</p>
+        </div>
+        <div class="inputDiv">
+            <div class="leave" id="leave_phone_from">
+                <hr class="line">
+            </div>
+            <span id="tip_phone_from">寄件人手机</span>
+            <input type="number" class="voi_inputArea" placeholder="此项选填" id="phone_from">
+            <p class="display_hidden error_show" id="error_phone_from">请输入姓名</p>
+        </div>
+        <div class="inputDiv" id="last_div">
+            <div class="leave" id="leave_time">
+                <hr class="line" id="last_line">
+            </div>
+            <span id="tip_time">寄出时间</span>
+            <div class="selectDiv grey" id="halfyear_div">
+                <input type="radio" name="yearchoose" id="halfyear" class="radio">
+                <label for="halfyear" class="">半年</label>
+            </div>
+            <div class="selectDiv grey" id="year_div">
+                <input type="radio" name="yearchoose" id="year" class="radio">
+                <label for="year" class="">一年</label>
+            </div>
+            <p class="display_hidden error_show" id="error_time">请输入姓名</p>
+        </div>
+        <div class="inputDiv">
+            <div class="leave"></div>
+            <span>填完啦，提交吧</span>
+        </div>
+    </div>
+    <input type="submit" id="to_record" class="radius" value="去录音">
+</section>
+
+<section class="hidden Absolute_Center" id="sec_back">
+    <img src="picture/font/start_record.png" id="startRecord">
+    <p id="time_last">00:00</p>
+    <div class="noscroll" id="noscroll_div">
+        <div id="div_up" class="animated div_scroll">
+            <div class="record_div">
+                <div class="record_start Absolute_Center" id="record_start">
+                    <svg version="1.1">
+                        <circle class="circle" id="step_back_record" cx="54" cy="54" r="45" fill="transparent" stroke="#6cbd74" stroke-width="6"></circle>
+                        <circle class="circle active" id="step_front_record" cx="54" cy="54" r="45" fill="transparent" stroke="#FFF" stroke-width="6" transform="rotate(-90 54 54)"></circle>
+                    </svg>
+                    <img src="picture/icon/record.svg" id="record" class="Absolute_Center">
+                </div>
+                <img src="picture/icon/wave.png" id="wave_record" alt="" class="waveRaidus">
+            </div>
+            <p id="tip" class="transition">按一下开始录音 再按一下结束录音<br>
+                最长可以录60s哦
+            </p>
+        </div>
+        <div id="div_down" class="animated div_hidden div_scroll">
+            <div class="record_div">
+                <div class="record_start Absolute_Center" id="play_start">
+                    <svg version="1.1">
+                        <circle class="circle" id="step_back_play" cx="54" cy="54" r="45" fill="transparent" stroke="#6cbd74" stroke-width="6"></circle>
+                        <circle class="circle active" id="step_front_play" cx="54" cy="54" r="45" fill="transparent" stroke="#FFF" stroke-width="6" transform="rotate(-90 54 54)"></circle>
+                    </svg>
+                    <img src="picture/icon/play.svg" id="play" class="Absolute_Center">
+                    <img src="picture/icon/stop.svg" id="stop_play" class="Absolute_Center hidden">
+                </div>
+                <img src="picture/icon/wave.png" id="wave" alt="" class="waveRaidus">
+            </div>
+
+            <div id="operation">
+                <input type="submit" id="record_restart" class="record_button radius" value="重录">
+                <input type="submit" id="record_upload" class="record_button radius" value="提交">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hidden" id="background">
+    <div class="Absolute_Center" id="div_end">
+        <img src="picture/postage.png" id="postage">
+        <div id="end_tip">
+            投递成功！<br>
+            感谢你的参与＞ˍ＜<br>
+            梯仔会在 <b id="halfyear_show" class="display_hidden">半年</b><b id="year_show" class="display_hidden">一年</b> 后<br>
+            以 <b>短信</b> 形式通知 <b>收信人</b><br>
+            <b>获取码</b> 和 <b>获取方式</b>
+        </div>
+        <p id="code">你的获取码为：<span id="code_show"></span></p>
+        <input type="submit" id="end_button" class="radius" value="确定">
+    </div>
+</section>
+
+</body>
+</html>
